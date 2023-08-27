@@ -33,8 +33,33 @@ let myObj = {
 const myFunction = function(){
     console.log("hi");
 }
-myFunction();
+// myFunction();
 
-console.log(typeof heros); // => object
-console.log(typeof myObj); // => object
-console.log(typeof myFunction); // => function
+// console.log(typeof heros); // => object
+// console.log(typeof myObj); // => object
+// console.log(typeof myFunction); // => function
+
+
+// ***********************************************************
+
+// stack (Primitive), Heap (Non-Primitive)
+
+let myYouTubeNme = "DailyGeeksInfo"
+
+let anotherName = myYouTubeNme;
+console.log(anotherName);
+anotherName = "a2zGame"
+
+console.log(anotherName);
+console.log(myYouTubeNme);
+
+let userOne = {
+    email: "prashant123@gmail.com",
+    upi: "prashant12sbi"
+}
+
+let userTwo = userOne;
+
+userTwo.email = 'ewem12amial.com'
+console.log(userTwo)
+console.log(userOne)
