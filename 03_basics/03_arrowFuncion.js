@@ -44,8 +44,9 @@ nimbu();
 // const addTwo = (num1, num2) => ( num1 + num2 )   // this will return implicit value if arrow function has has expression body
 
 const addTwo = (num1, num2) => {
-    num1 + num2
+    return num1 + num2
 }    // this has to return explicit value if arrow function has has block body
+// const addTwo = (num1, num2) => {return num1 + num2}    // this has to return explicit value if arrow function has has block body
 
 
 // const addTwo = (num1, num2) => ( {username: "Prahant"} )    // this will return implicit value if arrow function has has expression body
