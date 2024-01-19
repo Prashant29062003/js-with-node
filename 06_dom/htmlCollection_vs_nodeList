@@ -8,9 +8,11 @@ The nodes can be accessed by index numbers. The index starts at 0.
 
 * Both have a length property that returns the number of elements in the list (collection).
 
-* An HTMLCollection is a collection of document elements.
+**** 
+    An HTMLCollection is a collection of document elements.
 
-* A NodeList is a collection of document nodes (element nodes, attribute nodes, and text nodes).
+**** 
+    A NodeList is a collection of document nodes (element nodes, attribute nodes, and text nodes).
 
 * HTMLCollection items can be accessed by their name, id, or index number.
 
@@ -25,3 +27,11 @@ The nodes can be accessed by index numbers. The index starts at 0.
 * The querySelectorAll() method returns a static NodeList.
 
 * The childNodes property returns a live NodeList. 
+
+Some examploes of exccess methods
+
+eg. document.getElementById() - Element Object
+eg. document.getElementsByClassName() - Html Collection
+eg. document.getElementsByTagName() - Html Collection
+eg. document.querySelector() - Element Object
+eg. document.querySelectorAll() - Node List
