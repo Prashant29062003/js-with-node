@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Nimbu Pani</title>
+</head>
+<body style="background-color: #121212; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuseday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+
+    <script>
+        const parent = document.querySelector(".parent");
+        // console.log(parent.innerHTML);
+        // console.log(parent.outerHTML);
+        // console.log(parent.children);
+        // console.log(parent.children[1].innerHTML);
+
+        // for (let i = 0; i < parent.children.length; i++) {
+        //     console.log(parent.children[i].innerHTML);
+            
+        // }
+
+        // const arrParent = Array.from(parent.children)
+        // console.log(arrParent);
+
+        parent.children[1].style.color = "#ff5151"
+        // console.log(parent.firstElementChild);
+        // console.log(parent.lastElementChild);
+
+        const dayOne = document.querySelector(".day");
+        // console.log(dayOne);
+        // console.log(dayOne.parentElement);
+        // console.log(dayOne.nextElementSibling);
+
+        console.log("NODES: ",parent.childNodes);
+
+        
+
+
+        // -----------------
+            // this will throw an error as this is a HTML collection, it doesn't have forEach loop it looks like array but it is not (for more details chheck - 06_dom --> htmlCollection's file )
+        // parent.children.forEach(ele => {
+        //     ele.style.color = 'blue'
+        // });      
+
+        // ----------
+
+
+    </script>
+</body>
+</html>

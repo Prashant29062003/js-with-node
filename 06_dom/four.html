@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #121212; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(langName) {
+        const langParent = document.querySelector(".language");
+        const liItem = document.createElement("li");
+        const addText = document.createTextNode(`${langName}`); 
+        liItem.appendChild(addText);
+        langParent.appendChild(liItem);
+
+// ------------------   Both Same code but upper one is optimized   ------------------- //
+
+        // const li = document.createElement("li");
+        // li.innerText = `${langName}`
+        // document.querySelector(".language").appendChild(li)
+        // this innerText is trnversing at every time when it is called but in other code only a li element is created and then we append a textNode into it and just append the li in ul using its className = language(here)
+
+    }
+    addLanguage("Python");
+    addLanguage("CPP");
+    addLanguage("TypeScript");
+    
+    // ------------------   Both Same code but Lower one is optimized   ------------------- //
+
+    function addOptiLanguage(langName){
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector(".language").appendChild(li);
+    }
+    addOptiLanguage("golang")
+
+    // Edit
+    const secLang = document.querySelector("li:nth-child(2)")
+    console.log(secLang);
+    secLang.innerHTML = "mojo"
+    const newLi = document.createElement("li") 
+    // newLi.textContent = "Mojo"
+    // secLang.replaceWith(newLi)
+
+    // Edit
+    const fisrtLang = document.querySelector("li:first-child");
+    console.log(fisrtLang);
+    fisrtLang.outerHTML = "<li>Typescript</li>"
+
+    // remove
+    const lastElem = document.querySelector("li:last-child");
+    lastElem.remove()
+
+    
+</script>
+</html>
