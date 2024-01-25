@@ -20,6 +20,7 @@ nav {
     gap: 0.5rem;
     border-bottom: solid 1px #aaa;
     background-color: #eee;
+    max-height: 100px;
 }
 
 nav a {
@@ -31,6 +32,7 @@ nav a {
     text-align: center;
     text-decoration: none;
     color: #555;
+    width: 0;
 }
 
 nav a[aria-current='page'] {

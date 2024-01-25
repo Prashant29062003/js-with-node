@@ -1,0 +1,38 @@
+*{
+    width: 100%;
+    box-sizing: border-box;
+
+}
+#wrapper{
+    width: 90%;
+    margin: 2vw auto;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#wrapper h1{
+    text-align: center;
+}
+#wrapper p{
+    font-size: 2vw;
+    font-weight: 700;
+    text-align: center;
+}
+#wrapper form{
+    width: 100%;
+    text-align: center;
+}
+#wrapper form #guess{
+    font-size: 2vw;
+    font-weight: 700;
+}
+#wrapper form input{
+    width: 20vw;
+    border: none;
+    padding: .7vw;
+}
+#wrapper form #subt{
+    cursor: pointer;
+}
