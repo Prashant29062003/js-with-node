@@ -22,13 +22,19 @@
   }
   
   #results {
+    /* margin-left: 90px; */
     font-size: 35px;
-    margin-left: 90px;
     margin-top: 20px;
-    color: rgb(241, 241, 241);
+    color: rgb(44, 36, 33);
   }
-  #weight-guide{
+  #results span{
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 2.1vw;
+    font-weight: 600;
     text-align: center;
+    background-color: #aaa;
   }
   button {
     width: 150px;
