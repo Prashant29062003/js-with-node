@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>World Calss Website</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+    <script>
+
+        const sayDate = function(str){
+            console.log(Date());
+            console.log(str, Date.now());
+        }
+        const interval = setInterval(sayDate, 1000, "hi");
+        const stop = document.getElementById("stop");
+        
+        clearInterval(interval)
+    </script>
+</body>
+</html>
