@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th{
+            text-align: left;
+            border: 2px solid #222;
+            padding: 8px;
+            width: auto;
+        }
+        tr:nth-child(even){
+            background: #333;
+        }
+        .xhrProperties{
+            padding: 2rem;
+        }
+
+    </style>
+</head>
+<body style="background-color: #000; color: aliceblue; height: 100vh; margin: 0 auto; width: 100%;">
+    <div class="xhrProperties">
+        <table>
+            <tr>
+                <th>Value</th>
+                <th>State</th>
+                <th>Descreption</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>UNSENT</td>
+                <td>Client has been created. open() not called yet.</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>OPENED</td>
+                <td>open() has been called.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>HEADERS_RECEIVED</td>
+                <td>send() has been called, and headers and status are available.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>LOADING</td>
+                <td>Downloading; responseText holds partial data.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>DONE</td>
+                <td>The operation is complete.</td>
+            </tr>
+        </table>
+    </div>
+    
+    <!-- 0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+
+        <!-- properties of resposnses -->
+        <!-- Property	Description
+onreadystatechange	Defines a function to be called when the readyState property changes
+readyState	Holds the status of the XMLHttpRequest.
+0: request not initialized
+1: server connection established
+2: request received
+3: processing request
+4: request finished and response is ready
+status	200: "OK"
+403: "Forbidden"
+404: "Page not found"
+For a complete list go to the Http Messages Reference
+statusText	Returns the status-text (e.g. "OK" or "Not Found") -->
+
+            <div>
+                <table>
+                    <tr>
+                        <th>Value</th>
+                        <th>Property</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>onreadystatechange</td>
+                        <td>Defines a function to be called when the readyState property changes
+                            readyState	Holds the status of the XMLHttpRequest.</td>
+                    </tr>
+                </table>
+            </div>
+
+            
+    <script>
+        // const div = document.createElement("div");
+        // const table = document.createElement("table");
+        // const tr = document.createElement("tr");
+        // const th = document.createElement("th");
+        // const td = document.createElement("td");
+        // const ul = document.createElement("ul");
+        // const li = document.createElement("li");
+
+        // const rowsOfTable = table.appendChild(tr);
+        // const headingsOfTable = tr.appendChild(th);
+        // const dataOfTable = tr.appendChild(td);
+       
+        const tableContent = [
+            
+            {
+                "head": ["Value","State","Descreption"],
+                "first": ["UNSENT","Client has been created. open() not called yet."],
+                "second": ["OPENED", "open() has been called."],
+                "third": ["HEADERS_RECEIVED","send() has been called, and headers and status are available."],
+                "forth": ["LOADING","Downloading; responseText holds partial data."],
+                "fifth": ["DONE","The operation is complete."]
+            },
+            {
+                "head": ["Property","Description"],
+                "first": ["onreadystatechange","Defines a function to be called when the readyState property changes readyState the status of the XMLHttpRequest."],
+                "second": ["request", "not initialized"],
+                "third": ["server","connection established"],
+                "forth": ["request","received"],
+                "fifth": ["processing","request"],
+                "sixth": ["request","finished and response is ready"],
+                a: [`status	200: "OK"`,`403: "Forbidden"`,`404: "Page not found"`,`For a complete list go to the Http Reference statusText Returns the status-text (e.g. "OK" or "Not Found")`]
+            }
+            
+        ]
+
+        
+        
+        const userUrl = "https://randomuser.me/api/";
+        // const xhr = new XMLHttpRequest();
+        // xhr.open("GET", userUrl);
+        // xhr.onreadystatechange = function(){
+        //     console.log(xhr.readyState);
+
+        // }
+        // xhr.onload = () => {
+        //     if (xhr.readyState === xhr.DONE) {
+        //         if (xhr.status === 200) {
+        //             // console.log(xhr.response);
+        //             console.log(xhr.responseText);
+        //         }
+        //     }
+        // };
+        
+        const meraData = "https://api.github.com/users/"
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", meraData);
+        xhr.onreadystatechange = function(){
+            // console.log(xhr.readyState);
+            if(xhr.readyState === 4){
+                // console.log(this.responseText);
+                const data = JSON.parse(this.responseText);
+                // console.log(data.info); 
+                console.log(data);
+            }
+        }
+        xhr.send()
+        
+    </script>
+</body>
+</html>
