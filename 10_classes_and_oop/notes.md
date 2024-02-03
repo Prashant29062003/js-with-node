@@ -5,6 +5,8 @@
 - These objects encapsulate data and behavior, fostering modularity, reusability, and easier maintenance in software development. 
 - OOP principles include encapsulation, inheritance, and polymorphism.
 
+* It's important to note that JavaScript is a prototype-based language, and its approach to OOP may differ from classical OOP languages like Java or C++. The concepts of encapsulation, inheritance, polymorphism, and abstraction are still fundamental, but their implementation details may vary.
+
 ## Object 
 - collection of properties and methods
 - exapmle in JS - toLowerCase
