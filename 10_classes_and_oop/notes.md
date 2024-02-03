@@ -33,6 +33,22 @@ In this example, person is an object literal with properties like name, age, isS
 2) A constructor function is to be called via "new" keyword.
 3) "this", and more methds are injected in new function.
 4) At last we got the all methods in new function we created as a seperate entity.
+```javascript
+// Constructor function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+// Create a Person object
+const myFather = new Person("John", "Doe", 50, "blue");
+
+// Display age
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.age + "."; 
+```
 ### Prototypes
 ### Class
 ### Instances(new, this)
