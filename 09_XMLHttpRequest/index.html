@@ -96,6 +96,9 @@ statusText	Returns the status-text (e.g. "OK" or "Not Found") -->
                     </tr>
                 </table>
             </div>
+            <div>
+                <img class="avatar" src="" alt="">
+            </div>
 
             
     <script>
@@ -151,18 +154,21 @@ statusText	Returns the status-text (e.g. "OK" or "Not Found") -->
         //         }
         //     }
         // };
+
+        const avatar = document.getElementsByClassName("avatar");
         
-        const meraData = "https://api.github.com/users/"
+        const meraData = "https://api.github.com/users/Prashant29062003";
         const xhr = new XMLHttpRequest();
         xhr.open("GET", meraData);
         xhr.onreadystatechange = function(){
-            // console.log(xhr.readyState);
-            if(xhr.readyState === 4){
-                // console.log(this.responseText);
-                const data = JSON.parse(this.responseText);
-                // console.log(data.info); 
+            
+            if(xhr.readyState === 4 && xhr.status === 200){
+                const data = JSON.parse(xhr.responseText);
                 console.log(data);
+                console.log(avatar_url);
+                avatar.src = data.avatar_url;
             }
+            
         }
         xhr.send()
         
