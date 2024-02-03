@@ -1,3 +1,5 @@
+// makng a object to another i.e. inheritence. via "__proto__ method = old method" and via "modern Method via setPrototypeOf() function"
+
 // --------- ? How to create my own mehtod like here "WE WANT TO FIND TRUE LENGTH OF ANY ARBITRERY "STRING."
 // let myName = "Prashant    "
 // let myClass = "BetchECE        "
