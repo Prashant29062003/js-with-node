@@ -29,6 +29,10 @@ let person = {
 In this example, person is an object literal with properties like name, age, isStudent, and a method sayHello.
 
 ### Contructor function
+1) New Object is created.
+2) A constructor function is to be called via "new" keyword.
+3) "this", and more methds are injected in new function.
+4) At last we got the all methods in new function we created as a seperate entity.
 ### Prototypes
 ### Class
 ### Instances(new, this)
