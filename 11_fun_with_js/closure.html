@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body style="background-color: #131313;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+    <script>
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`;
+            
+            return function(){
+                document.body.style.backgroundColor = `${color}`;   //this is because of Lexical scoping that this "color" parameter is used in this inner function i.e. the {closure} which means that close parent functoin's variable is accessed by it's child function.
+            }
+        }
+        document.getElementById("orange").onclick = clickHandler("orange");
+        document.getElementById("green").onclick = clickHandler("green");
+    </script>
+</body>
+</html>

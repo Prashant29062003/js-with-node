@@ -1,10 +1,11 @@
 function SetName(username){
     // complex calculation
-    this.username = username;
     console.log("called");
+    this.username = username;
 }
 
 function createUser(username, email, password){
+    // SetName(username);
     SetName.call(this, username);
 
     this.email = email;
