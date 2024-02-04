@@ -4,7 +4,7 @@ function User(email,password){
 
     Object.defineProperty(this, "email",{
         get: function(){
-            return `${this._email}.toUpperCase()`
+            return `${this._email.toUpperCase()}`
         },
         set: function(value){
             this._email = value;
@@ -13,7 +13,7 @@ function User(email,password){
 
     Object.defineProperty(User, "password",{
         get: function(){
-            return this._password.toLowerCase();
+            return `${this._password.toLowerCase()}`;
         },
         set: function(value){
             this._password = value;
