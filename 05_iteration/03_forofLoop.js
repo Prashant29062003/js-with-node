@@ -23,7 +23,7 @@ const myMap = new Map()
 myMap.set('IN', "Indiia");
 myMap.set('USA', "United States of Ameria");
 myMap.set('UK', "United Kingdom");
-// myMap.set('UK', "United Kingdom"); // ----> this is not print in console as map prints ony unique key value pair
+// myMap.set('UK', "United Kingdom"); // ----> this will not print in console as map prints ony unique key value pair
 
 // console.log(myMap);
 
